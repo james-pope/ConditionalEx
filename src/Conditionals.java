@@ -1,5 +1,6 @@
 public class Conditionals {
     public static boolean isLeapYear(int year){
+        int div2 = 
         if ()
     }
 
