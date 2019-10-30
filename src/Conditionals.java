@@ -1,8 +1,49 @@
 public class Conditionals {
     public static boolean isLeapYear(int year){
-        if (year%4 == 0){
+        if (year%4 == 0 && year%100!=0 || year%400==0){
             return true;
         }
+        else{
+            return false
+        }
+    }
+    public static double totalWages(double hours, double rate){
+        double wages;
+        if (hours <= 40){       //checks if you worked overtime
+            wages = hours*rate;
+            return wages;
+        }
+        else{
+            wages = hours*(rate*1.5);   
+            return wages;
+        }
+        return wages;
+    }
+    public static boolean(int month1, int day1, int year1, int month2, int day2, int year2){
+        if (year1>year2){       // checks if year1 is higher
+            return true;
+        }
+        else if(year1==year2){      //checks if year1 is the same as year2
+            if (month1 > month2){       //if years are equal, compares months
+                return true;
+            }
+            else if (month1==month2){   //checks if months are equal
+                if (day1>day2){         //if months are equal, checks days     
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+    public static Color bestMatch(int r, int g, int b){
     }
 
 
