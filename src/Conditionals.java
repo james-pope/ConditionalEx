@@ -1,11 +1,11 @@
 public class Conditionals {
     public static boolean isLeapYear(int year){
-        int div2 = 
-        if ()
-    }
+        
+       }
 
 
     public static void main(String [] args){
+        /*
         double wages = totalWages(45, 12.5);
         System.out.println("Wages for 45 hours at $12.50 " + wages);
         wages = totalWages(30, 10);
@@ -43,6 +43,6 @@ public class Conditionals {
         System.out.println("Find Best fit 2 3 1 is " + findBestFit(2,3,1));
         System.out.println("Find Best fit 6 3 4 is " + findBestFit(6,3,4));
         System.out.println("Find Best fit 3 6 4 is " + findBestFit(3,6,4));
-
+*/
     }
 }
