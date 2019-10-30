@@ -1,7 +1,9 @@
 public class Conditionals {
     public static boolean isLeapYear(int year){
-        
-       }
+        if (year%4 == 0){
+            return true;
+        }
+    }
 
 
     public static void main(String [] args){
