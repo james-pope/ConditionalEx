@@ -68,20 +68,22 @@ public class Conditionals {
         }
   }
     public static int findBestFit(int size1, int size2, int space){
-        if (size1 + size2 <= space) {
-            return 3;
-        }
-        else if (space < size1 && space < size2){
-            return 0;
+        int x;
+        if(size1 + size2 <= space){
+            x = 3;
         }
         else{
-            if (size1 > size2 || size1 == size2) {
-                return 1;
+            if (size1 > size2 && size1 <= space || size1 == size2){
+                x = 1;
+            }
+            else if (size2 > size1 && size2 <= space){
+                x = 2;
             }
             else{
-                return 2;
+                x = 0;
             }
         }
+        return x;
     }
 
 
