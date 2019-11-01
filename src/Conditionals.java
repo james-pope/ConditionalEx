@@ -73,17 +73,28 @@ public class Conditionals {
             x = 3;
         }
         else{
-            if (size1 > size2 && size1 <= space || size1 == size2){
-                x = 1;
-            }
-            else if (size2 > size1 && size2 <= space){
-                x = 2;
+            if (size1 > space){
+                if (size2 > space){
+                    x = 0;
+                }
+                else{
+                    x = 2;
+                }
             }
             else{
-                x = 0;
+                if(size2 > space || size1 == size2){
+                    x = 1;
+                }
+                else if (size1 > size2){
+                    x = 1;
+                }
+                else{
+                    x = 2;
+                }
             }
         }
         return x;
+
     }
 
 
