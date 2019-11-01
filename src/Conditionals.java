@@ -1,10 +1,12 @@
+import java.awt.Color;
+
 public class Conditionals {
     public static boolean isLeapYear(int year){
         if (year%4 == 0 && year%100!=0 || year%400==0){
             return true;
         }
         else{
-            return false
+            return false;
         }
     }
     public static double totalWages(double hours, double rate){
@@ -17,9 +19,8 @@ public class Conditionals {
             wages = hours*(rate*1.5);   
             return wages;
         }
-        return wages;
     }
-    public static boolean(int month1, int day1, int year1, int month2, int day2, int year2){
+    public static boolean isLater(int month1, int day1, int year1, int month2, int day2, int year2){
         if (year1>year2){       // checks if year1 is higher
             return true;
         }
@@ -28,7 +29,7 @@ public class Conditionals {
                 return true;
             }
             else if (month1==month2){   //checks if months are equal
-                if (day1>day2){         //if months are equal, checks days     
+                if (day1>day2){         //if months are equal, checks days
                     return true;
                 }
                 else{
@@ -43,12 +44,49 @@ public class Conditionals {
             return false;
         }
     }
-    public static Color bestMatch(int r, int g, int b){
+  public static Color bestMatch(int r, int g, int b){
+        if (r > g && r > b){
+            return Color.RED;
+        }
+        else if(g > r && g > b){
+            return Color.GREEN;
+        }
+        else if (b > r && b > g){
+            return Color.BLUE;
+      }
+        else if (b == g && b > r){
+            return Color.CYAN;
+        }
+        else if (b == r && b > g){
+            return Color.MAGENTA;
+        }
+        else if (r == g && r > b){
+            return Color.YELLOW;
+        }
+        else{
+            return Color.GRAY;
+        }
+  }
+    public static int findBestFit(int size1, int size2, int space){
+        if (size1 + size2 <= space) {
+            return 3;
+        }
+        else if (space < size1 && space < size2){
+            return 0;
+        }
+        else{
+            if (size1 > size2 || size1 == size2) {
+                return 1;
+            }
+            else{
+                return 2;
+            }
+        }
     }
 
 
     public static void main(String [] args){
-        /*
+
         double wages = totalWages(45, 12.5);
         System.out.println("Wages for 45 hours at $12.50 " + wages);
         wages = totalWages(30, 10);
@@ -59,7 +97,6 @@ public class Conditionals {
         System.out.println("2004 " + isLeapYear(2004));
         System.out.println("2003 " + isLeapYear(2003));
         System.out.println("2100 " + isLeapYear(2100));
-
 
         // is later
         System.out.println("1/2/2010 is later than 1/2/2011 " + isLater(1,2,2010, 1,2,2011));
@@ -86,6 +123,5 @@ public class Conditionals {
         System.out.println("Find Best fit 2 3 1 is " + findBestFit(2,3,1));
         System.out.println("Find Best fit 6 3 4 is " + findBestFit(6,3,4));
         System.out.println("Find Best fit 3 6 4 is " + findBestFit(3,6,4));
-*/
     }
 }
