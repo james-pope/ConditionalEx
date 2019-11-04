@@ -16,7 +16,7 @@ public class Conditionals {
             return wages;
         }
         else{
-            wages = hours*(rate*1.5);   
+            wages = (hours - 40)*(rate*1.5);   
             return wages;
         }
     }
